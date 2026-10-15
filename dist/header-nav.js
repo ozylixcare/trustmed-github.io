@@ -1,4 +1,4 @@
-/* Shared, header-only navigation for the storefront and admin workspace. */
+/* Shared storefront bottom navigation and admin header navigation for the storefront and admin workspace. */
 (function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.TMHeaderNav=factory()})(typeof globalThis!=='undefined'?globalThis:this,function(){
 'use strict';
 const paths={
@@ -23,10 +23,10 @@ const paths={
  audit:'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 12h6m-6 5h4"/>'
 };
 function icon(key){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+(paths[key]||paths.dashboard)+'</svg>'}
-const storeLinks=[['home','Home','/'],['store','Store','/shop'],['compare','Comparison','/compare'],['quote','Quotations','/my-care'],['account','Account','/account'],['cart','Cart','/cart']];
+const storeLinks=[['home','Home','/'],['store','Store','/shop'],['compare','Comparison','/compare'],['quote','Quotations','/my-care'],['account','Account','/account']];
 function activeStore(hash){const p=(hash||'#/').replace(/^#/,'').split('?')[0];if(['/shop','/medicines','/offers'].includes(p)||p.startsWith('/product/'))return 'store';if(p==='/compare')return 'compare';if(['/my-care','/prescription'].includes(p))return 'quote';if(p==='/account')return 'account';if(['/cart','/checkout'].includes(p))return 'cart';return p==='/'?'home':''}
 function link(key,label,href,active,badge=''){return '<a class="header-tab'+(active?' is-active':'')+'" href="'+href+'"'+(active?' aria-current="page"':'')+'><span class="header-tab-icon">'+icon(key)+badge+'</span><span class="header-tab-label">'+label+'</span></a>'}
-function storefront(hash,count){const active=activeStore(hash),n=Math.max(0,Number(count)||0);return storeLinks.map(([key,label,path])=>link(key,label,'#'+path,key===active,key==='cart'&&n?'<span class="header-cart-badge" aria-label="'+n+' items">'+(n>99?'99+':n)+'</span>':'')).join('')}
+function storefront(hash){const active=activeStore(hash);return storeLinks.map(([key,label,path])=>link(key,label,'#'+path,key===active)).join('')}
 const adminIcons={dashboard:'dashboard',analytics:'chart',visitors:'visitors',calendar:'calendar',orders:'quote',prescriptions:'quote',returns:'returns',products:'box',inventory:'box',discounts:'offer',customers:'account',consultations:'doctor',appointments:'calendar',offers:'offer',marketing:'marketing',behaviour:'chart',banners:'image',media:'image',images:'image',editor:'settings',settings:'settings',audit:'audit'};
 function admin(groups,current){return '<nav class="mobile-header-tabs admin-header-tabs" id="admin-header-tabs" aria-label="Mobile admin navigation">'+groups.flatMap(g=>g[1]).map(([key,label])=>link(adminIcons[key],label,'#/'+key,key===current)).join('')+'</nav>'}
 function revealAdmin(rail,previousScroll){const active=rail?.querySelector('[aria-current="page"]');if(!active||!rail.clientWidth)return;rail.scrollLeft=previousScroll||0;if(active.offsetLeft<rail.scrollLeft||active.offsetLeft+active.offsetWidth>rail.scrollLeft+rail.clientWidth)rail.scrollLeft=active.offsetLeft-(rail.clientWidth-active.offsetWidth)/2}

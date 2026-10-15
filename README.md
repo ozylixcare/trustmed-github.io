@@ -2,10 +2,10 @@
 
 ## GitHub Pages deployment
 
-This repository is **ozylixcare/demotrustmed-github.io**. Only this repository is used by the deployment workflow.
+This repository is **ozylixcare/trustmed-github.io**. Only this repository is used by the deployment workflow.
 
-- Store: https://ozylixcare.github.io/demotrustmed-github.io/
-- Admin: https://ozylixcare.github.io/demotrustmed-github.io/admin.html
+- Store: https://ozylixcare.github.io/trustmed-github.io/
+- Admin: https://ozylixcare.github.io/trustmed-github.io/admin.html
 - Demo ID: `demo@trustedmeds.local`
 - Demo password: `TrustedMeds@2026`
 
@@ -13,7 +13,7 @@ Enable **Settings → Pages → Build and deployment → Source → GitHub Actio
 
 GitHub Pages serves the browser-local demonstration. Admin edits appear in store tabs in the same browser. Data is isolated under `demotrustmed-` storage keys. This public demo login does not protect private business data. Node server code is included under `backend/`, but GitHub Pages does not execute it. No database or Render service is connected by this deployment.
 
-The repo name is a project repository, so its default Pages URL is under `ozylixcare.github.io/demotrustmed-github.io/`; it does not create a `demotrustmed.github.io` hostname.
+The repo name is a project repository, so its default Pages URL is under `ozylixcare.github.io/trustmed-github.io/`; it does not create a `demotrustmed.github.io` hostname.
 
 
 A calm, light-blue pharmacy storefront with a connected admin workspace and a Node backend for demo commerce. This repository is the full source; `dist/` is the static preview.
@@ -157,3 +157,11 @@ Additional Node routes:
 The team manages service names, descriptions, fees, languages, duration, image and visibility in **Doctor services**. Customer requests include a preferred date/time in India time and a demo alias. **Consultation requests** lets the team assign a demo clinician, confirm or cancel the request and add meeting instructions. No real doctor profiles, credentials, payments, video calls, diagnoses or prescriptions are fabricated. Use of a generated clinician illustration does not identify or endorse a real practitioner.
 
 The new screens, catalogue fields, matching metadata, offers, service content, sections and navigation are editable in admin. Infrastructure, production integrations and regulated clinical decisions still require the later deployment and operating setup; this demo does not claim 100% production readiness.
+
+## Mobile storefront update
+
+The storefront has a five-tab bottom dock (Home, Store, Comparison, Quotations, Account). Cart stays in the header. The dock is outside the sticky header, includes safe-area spacing, and reserves room below page content. Admin retains its grouped hamburger and scrollable mobile section menu.
+
+The storefront uses white surfaces, restrained accents and shadows, a compact homepage price comparison, shorter copy, and landscape banners. Existing custom text is preserved by the one-time default-copy migration.
+
+The Pages Actions workflow publishes `dist/` at the project root. Root `index.html` and `admin.html` are fallback entry links if the repository is published directly from the main branch; they redirect into `dist/` and preserve hash routes.
