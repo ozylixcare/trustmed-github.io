@@ -23,7 +23,7 @@ const paths={
  audit:'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 12h6m-6 5h4"/>'
 };
 function icon(key){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+(paths[key]||paths.dashboard)+'</svg>'}
-const storeLinks=[['home','Home','/'],['store','Store','/shop'],['compare','Comparison','/compare'],['quote','Quotations','/my-care'],['account','Account','/account']];
+const storeLinks=[['home','Home','/'],['store','Store','/shop'],['compare','Comparison','/compare'],['quote','Quotations','/prescription'],['account','Account','/account']];
 function activeStore(hash){const p=(hash||'#/').replace(/^#/,'').split('?')[0];if(['/shop','/medicines','/offers'].includes(p)||p.startsWith('/product/'))return 'store';if(p==='/compare')return 'compare';if(['/my-care','/prescription'].includes(p))return 'quote';if(p==='/account')return 'account';if(['/cart','/checkout'].includes(p))return 'cart';return p==='/'?'home':''}
 function link(key,label,href,active,badge=''){return '<a class="header-tab'+(active?' is-active':'')+'" href="'+href+'"'+(active?' aria-current="page"':'')+'><span class="header-tab-icon">'+icon(key)+badge+'</span><span class="header-tab-label">'+label+'</span></a>'}
 function storefront(hash){const active=activeStore(hash);return storeLinks.map(([key,label,path])=>link(key,label,'#'+path,key===active)).join('')}

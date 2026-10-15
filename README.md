@@ -167,3 +167,9 @@ The storefront uses white surfaces, restrained accents and shadows, a compact ho
 The main branch publishes the generated static files at the project root. Root `index.html` and `admin.html` are generated from `dist/` so branch publishing serves the store and admin directly.
 
 The logo-colour update uses blue/green accents and glass-style controls, with solid fallbacks and reduced-motion support. The mobile storefront bar is a separate fixed footer, with five destinations; Cart remains in the header. Categories and products precede the compact comparison and offers.
+
+## Pincode and WhatsApp handoffs
+
+A compact header search now sits beside the pincode check on mobile and desktop. Settings → Delivery areas accepts a comma/space-separated list of 6-digit Indian pincodes. Blank coverage returns “needs confirmation”; it never claims that every pincode is served. This is a configured list, not a live courier serviceability API.
+
+Settings → Connections → WhatsApp business number controls the chat button, prescription quotation draft and delivery confirmation links. Enter the country code and number. No number is assumed. Until configured, quotations on WhatsApp stay disabled and the chat control explains setup is pending. WhatsApp opens a draft only: customers send it themselves and attach any prescription manually. Uploaded document bytes are not transferred through the link. The separate demo admin request flow remains available.
