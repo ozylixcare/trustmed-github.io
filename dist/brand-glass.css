@@ -1,0 +1,37 @@
+/* Logo colours, clear shopping hierarchy and translucent button surfaces. */
+:root{--brand-blue:#0877ef;--brand-green:#00a86b;--glass-ink:#174858}
+body:not(.admin-body){--ink:#173f51;--navy:#163e53;--muted:#647c87;--line:#dfebef}
+body:not(.admin-body) .topline{background:linear-gradient(100deg,#edf6ff,#eaf8f0);color:#426b75}
+body:not(.admin-body)>header{border-color:#e0edf2;background:#ffffffef}
+body:not(.admin-body) h1,body:not(.admin-body) .section-heading h2,body:not(.admin-body) .page-title{color:#183f53}
+body:not(.admin-body) .text-link,body:not(.admin-body) .compare-link{color:#0870d5}
+body:not(.admin-body) .hero-poster,body:not(.admin-body) .promo-poster{border:1px solid #e0eef2;box-shadow:0 8px 24px -20px #086cd54d}
+body:not(.admin-body) .poster-copy h1{color:#124461}
+body:not(.admin-body) .category-art{background:#edf6ff}body:not(.admin-body) .category:nth-child(2n) .category-art{background:#eaf8f0}
+body:not(.admin-body) .home-comparison{background:linear-gradient(135deg,#f0f7fd,#f0f9f3);border-color:#dcece7}
+body:not(.admin-body) .home-price-caption{background:#eaf4f4;color:#22576a}
+body:not(.admin-body) .prescription-banner{background:linear-gradient(110deg,#edf6ff,#edf9f1);border-color:#d9ece7}
+body:not(.admin-body) .prescription-banner h3{color:#1b5061}
+body:not(.admin-body) .service-3d.blue{background:#eaf3ff!important;color:#0877ef!important}
+body:not(.admin-body) .service-3d.mint{background:#e4f7ed!important;color:#008a5e!important}
+body:not(.admin-body) .service-3d.lilac{background:#e8f4fc!important;color:#3485b9!important}
+body:not(.admin-body) .service-3d.peach{background:#ecf7f1!important;color:#3b8a68!important}
+body:not(.admin-body) .product-card:hover,body:not(.admin-body) .category:hover{border-color:#9accc8}
+body:not(.admin-body) .cta-panel{background:linear-gradient(125deg,#eaf4ff,#e8f8ee);border-color:#d9ebe6}
+body:not(.admin-body)>footer{background:#f1f7f8;border-color:#e0ecf0}
+.service-heading{display:flex;justify-content:space-between;gap:15px;align-items:baseline;margin:0 0 15px}.service-heading h2{font-size:19px;letter-spacing:-.4px;margin:0;color:#244d5e}.service-heading span{font-size:11px;color:#718893}
+/* All button controls get a solid fallback plus a subtle glass highlight. */
+body :is(button,.btn,.add-btn,.chip){background-color:#f0f7fa;background-image:linear-gradient(145deg,#ffffffdc,#e6f4faac 55%,#e7f6efb8);color:var(--glass-ink);border:1px solid #c9e0e8;border-top-color:#ffffffed;border-radius:12px;box-shadow:inset 0 1px 0 #fff,0 2px 5px #2a638912,0 7px 16px -13px #174f70;backdrop-filter:blur(14px) saturate(1.35);-webkit-backdrop-filter:blur(14px) saturate(1.35);transition:box-shadow .18s,background-color .18s,transform .18s}
+body :is(button,.btn,.add-btn,.chip):focus-visible{outline:3px solid #0877ef;outline-offset:3px}
+body:not(.admin-body) :is(.btn.primary,.chips .chip.active,.chip.active),body.admin-body .btn.primary{background-color:#096dc6;background-image:linear-gradient(120deg,#0874e8eb,#0876c3e8 55%,#07896fe8);color:#fff;border:1px solid #ffffff65;border-top-color:#ffffffad;box-shadow:inset 0 1px 0 #ffffff4d,0 2px 5px #0871b51a,0 8px 17px -12px #07838380;backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4)}
+body:not(.admin-body) .add-btn{color:#08775e;background-image:linear-gradient(145deg,#fffffff0,#e2f5edcc);border-color:#b9dfce;box-shadow:inset 0 1px 0 white,0 2px 5px #1a6b4710}
+body:not(.admin-body) .heart{background-image:linear-gradient(145deg,#fffffff0,#edf8faab);color:#5d8796;border-radius:50%;box-shadow:inset 0 1px 0 white,0 2px 4px #1f6a7c0d}
+body:not(.admin-body) .heart.saved{color:#b34f70;background:#fff1f5}
+body .admin-table .table-actions button,body .admin-btn{background-image:linear-gradient(145deg,#ffffffd9,#e6f4faad);color:#316c88;border-color:#d0e6ed;box-shadow:inset 0 1px 0 #fff,0 3px 8px #3269860d}
+body .header-cart{background-image:linear-gradient(145deg,#fffffff5,#e8f5fbcc)!important;border-color:#d4e8ef!important;box-shadow:inset 0 1px 0 #fff,0 3px 8px #2877a214!important}
+body :is(button,.btn,.add-btn,.chip):disabled{opacity:.5;box-shadow:none;cursor:not-allowed}
+@media(hover:hover){body :is(button,.btn,.add-btn,.chip):not(:disabled):hover{box-shadow:inset 0 1px 0 #fff,0 4px 13px #2c7c9c22;transform:translateY(-1px)}body:not(.admin-body) .btn.primary:hover{box-shadow:inset 0 1px 0 #ffffff80,0 5px 14px #087d9a30;filter:brightness(1.03)}}
+body :is(button,.btn,.add-btn,.chip):not(:disabled):active{transform:translateY(1px);box-shadow:inset 0 1px 3px #13547818}
+@media(max-width:800px){.service-heading{margin-bottom:12px}.service-heading h2{font-size:17px}.service-heading span{display:none}body:not(.admin-body) .header-cart #cart-count{background:#00a86b}body:not(.admin-body) .pharmacy-service-grid>a{border-color:#dceaf0;background:#ffffff}body:not(.admin-body) .pharmacy-service-grid h3{color:#284f62}.mobile-bottom-nav .header-tab.is-active{color:#086cda}.mobile-bottom-nav{border-top-color:#d6e8ef}.mobile-bottom-nav .header-tab{font-weight:500}.mobile-bottom-nav .header-tab.is-active .header-tab-label{font-weight:700}}
+@media(prefers-reduced-motion:reduce){body :is(button,.btn,.add-btn,.chip){transition:none;transform:none!important}}
+@media(prefers-reduced-transparency:reduce){body :is(button,.btn,.add-btn,.chip){backdrop-filter:none;-webkit-backdrop-filter:none;background-color:#eff6f9}.mobile-bottom-nav{background:#f8fcff;backdrop-filter:none;-webkit-backdrop-filter:none}}

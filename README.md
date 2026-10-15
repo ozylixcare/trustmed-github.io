@@ -165,3 +165,5 @@ The storefront has a five-tab bottom dock (Home, Store, Comparison, Quotations, 
 The storefront uses white surfaces, restrained accents and shadows, a compact homepage price comparison, shorter copy, and landscape banners. Existing custom text is preserved by the one-time default-copy migration.
 
 The Pages Actions workflow publishes `dist/` at the project root. Root `index.html` and `admin.html` are fallback entry links if the repository is published directly from the main branch; they redirect into `dist/` and preserve hash routes.
+
+The logo-colour update uses blue/green accents and glass-style controls, with solid fallbacks and reduced-motion support. The mobile storefront bar is a separate fixed footer, with five destinations; Cart remains in the header. Categories and products precede the compact comparison and offers.
