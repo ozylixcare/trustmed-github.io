@@ -1,5 +1,5 @@
 /* A quieter storefront: clear hierarchy, useful contrast and restrained surfaces. */
-body:not(.admin-body){--ink:#183b40;--navy:#163c42;--muted:#627578;--line:#e3e9e8;background:#fff;color:var(--ink);font-size:15px;line-height:1.55;font-family:'DM Sans',system-ui,sans-serif}
+body:not(.admin-body){--ink:#183b40;--navy:#163c42;--muted:#627578;--line:#e3e9e8;background:var(--paper);color:var(--ink);font-size:15px;line-height:1.55;font-family:'DM Sans',system-ui,sans-serif}
 body:not(.admin-body) h1,body:not(.admin-body) h2,body:not(.admin-body) h3{font-family:'DM Sans',system-ui,sans-serif;font-weight:700}
 body:not(.admin-body)>header{background:#fffffffa;border-bottom:1px solid #e6eceb;box-shadow:none;backdrop-filter:blur(16px)}
 body:not(.admin-body) .topline{background:#eef5f1;color:#426359;font-size:10px;padding-block:6px}.demo-pill{border:0;background:#dcebe3;color:#426359}
