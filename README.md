@@ -173,3 +173,9 @@ The logo-colour update uses blue/green accents and glass-style controls, with so
 A compact header search now sits beside the pincode check on mobile and desktop. Settings → Delivery areas accepts a comma/space-separated list of 6-digit Indian pincodes. Blank coverage returns “needs confirmation”; it never claims that every pincode is served. This is a configured list, not a live courier serviceability API.
 
 Settings → Connections → WhatsApp business number controls the chat button, prescription quotation draft and delivery confirmation links. Enter the country code and number. No number is assumed. Until configured, quotations on WhatsApp stay disabled and the chat control explains setup is pending. WhatsApp opens a draft only: customers send it themselves and attach any prescription manually. Uploaded document bytes are not transferred through the link. The separate demo admin request flow remains available.
+
+## Restored navigation and connected WhatsApp number
+
+The store's five-tab mobile navigation retains its bottom position and uses the original rounded, pale-violet panel with a purple active tile. The admin mobile section rail shares that styling. Cart stays in the storefront header.
+
+WhatsApp business number: **+91 72658 84137** (`917265884137` for wa.me links). New demo states use this number. A one-time migration fills previously empty WhatsApp settings; custom non-empty numbers are retained, and subsequent admin edits or disabling are respected. Chat, pincode confirmation and prescription quotation controls open message drafts to the configured number. Customers attach documents and send messages themselves. No live-agent presence or response time is assumed.

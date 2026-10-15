@@ -21,3 +21,9 @@ test('WhatsApp handoff needs a configured valid number and preserves the message
  assert.equal(link.origin,'https://wa.me');assert.equal(link.pathname,'/919876543210');assert.equal(link.searchParams.get('text'),message);
  assert(!link.searchParams.has('document'));assert(!link.searchParams.has('file'));
 });
+test('business WhatsApp default activates existing blank states without overriding later admin changes',()=>{
+ const state=Core.seed();assert.equal(state.settings.whatsappNumber,'917265884137');assert(Core.whatsappLink(state.settings,'Quote').startsWith('https://wa.me/917265884137?'));
+ delete state.contactSetupVersion;state.settings.whatsappNumber='';Core.validate(state);assert.equal(state.settings.whatsappNumber,'917265884137');
+ state.settings.whatsappNumber='';Core.validate(state);assert.equal(state.settings.whatsappNumber,'');
+ delete state.contactSetupVersion;state.settings.whatsappNumber='919876543210';Core.validate(state);assert.equal(state.settings.whatsappNumber,'919876543210');
+});
