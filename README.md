@@ -179,3 +179,5 @@ Settings → Connections → WhatsApp business number controls the chat button, 
 The store's five-tab mobile navigation retains its bottom position and uses the original rounded, pale-violet panel with a purple active tile. The admin mobile section rail shares that styling. Cart stays in the storefront header.
 
 WhatsApp business number: **+91 72658 84137** (`917265884137` for wa.me links). New demo states use this number. A one-time migration fills previously empty WhatsApp settings; custom non-empty numbers are retained, and subsequent admin edits or disabling are respected. Chat, pincode confirmation and prescription quotation controls open message drafts to the configured number. Customers attach documents and send messages themselves. No live-agent presence or response time is assumed.
+
+The current mobile navigation theme is **green**: pale mint glass, a green active tile and rounded panels shared by store and admin. The store bar remains at the bottom, with Cart in the header.

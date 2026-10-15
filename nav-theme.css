@@ -1,19 +1,19 @@
-/* The original soft-violet navigation, shared by store and admin. */
+/* The green glass navigation, shared by store and admin. */
 @media(max-width:800px){
-#mobile-bottom-nav{position:fixed;top:auto;bottom:calc(10px + env(safe-area-inset-bottom,0px));left:12px;right:12px;width:min(560px,calc(100% - 24px));margin-inline:auto;padding:5px;gap:2px;border:1px solid #fff;border-radius:23px;background:linear-gradient(140deg,#ffffffed,#f0f0fff2);box-shadow:0 5px 0 -2px #d7dcef,0 10px 22px -14px #6e70ad,inset 0 1px 0 white;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
-#mobile-bottom-nav .header-tab{min-height:60px;padding:7px 1px;gap:5px;border-radius:17px;color:#66738d;font-size:10px;font-weight:600;line-height:1.25}
+#mobile-bottom-nav{position:fixed;top:auto;bottom:calc(10px + env(safe-area-inset-bottom,0px));left:12px;right:12px;width:min(560px,calc(100% - 24px));margin-inline:auto;padding:5px;gap:2px;border:1px solid #fff;border-radius:23px;background:linear-gradient(140deg,#ffffffed,#edf8f2f2);box-shadow:0 5px 0 -2px #d2e8dc,0 10px 22px -14px #36795a,inset 0 1px 0 white;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+#mobile-bottom-nav .header-tab{min-height:60px;padding:7px 1px;gap:5px;border-radius:17px;color:#537366;font-size:10px;font-weight:600;line-height:1.25}
 #mobile-bottom-nav .header-tab-icon{width:25px;height:25px;background:transparent;border-radius:0;box-shadow:none;color:inherit}
-#mobile-bottom-nav .header-tab.is-active{background:linear-gradient(135deg,#eee5ff,#e4eaff);color:#7751d8;box-shadow:inset 0 1px 0 white,0 4px 10px -7px #7751d8}
-#mobile-bottom-nav .header-tab.is-active .header-tab-icon{background:transparent;color:#7751d8;box-shadow:none;filter:drop-shadow(0 3px 2px #9875dc33)}
-#mobile-bottom-nav .header-tab.is-active .header-tab-label{color:#7751d8;font-weight:600}
-#mobile-bottom-nav .header-tab:focus-visible{outline:2px solid #7751d8;outline-offset:-2px}
+#mobile-bottom-nav .header-tab.is-active{background:linear-gradient(135deg,#dbf4e6,#e7f7ee);color:#087f5b;box-shadow:inset 0 1px 0 white,0 4px 10px -7px #087f5b}
+#mobile-bottom-nav .header-tab.is-active .header-tab-icon{background:transparent;color:#087f5b;box-shadow:none;filter:drop-shadow(0 3px 2px #43946a26)}
+#mobile-bottom-nav .header-tab.is-active .header-tab-label{color:#087f5b;font-weight:600}
+#mobile-bottom-nav .header-tab:focus-visible{outline:2px solid #087f5b;outline-offset:-2px}
 }
 @media(max-width:850px){
-.admin-top>.admin-header-tabs{padding:5px;gap:3px;border:1px solid white;border-radius:22px;background:linear-gradient(140deg,#ffffffed,#f0f0fff2);box-shadow:0 5px 0 -2px #d7dcef,0 10px 22px -14px #6e70ad,inset 0 1px 0 white;scrollbar-color:#cbbde9 transparent}
-.admin-header-tabs .header-tab{border-radius:17px;color:#66738d;min-height:60px}
-.admin-header-tabs .header-tab.is-active{background:linear-gradient(135deg,#eee5ff,#e4eaff);color:#7751d8;box-shadow:inset 0 1px 0 white,0 4px 10px -7px #7751d8}
-.admin-header-tabs .header-tab.is-active .header-tab-icon{filter:drop-shadow(0 3px 2px #9875dc33)}
-.admin-header-tabs .header-tab:focus-visible{outline:2px solid #7751d8;outline-offset:-2px}
+.admin-top>.admin-header-tabs{padding:5px;gap:3px;border:1px solid white;border-radius:22px;background:linear-gradient(140deg,#ffffffed,#edf8f2f2);box-shadow:0 5px 0 -2px #d2e8dc,0 10px 22px -14px #36795a,inset 0 1px 0 white;scrollbar-color:#b5d7c2 transparent}
+.admin-header-tabs .header-tab{border-radius:17px;color:#537366;min-height:60px}
+.admin-header-tabs .header-tab.is-active{background:linear-gradient(135deg,#dbf4e6,#e7f7ee);color:#087f5b;box-shadow:inset 0 1px 0 white,0 4px 10px -7px #087f5b}
+.admin-header-tabs .header-tab.is-active .header-tab-icon{filter:drop-shadow(0 3px 2px #43946a26)}
+.admin-header-tabs .header-tab:focus-visible{outline:2px solid #087f5b;outline-offset:-2px}
 }
 @media(max-width:360px){#mobile-bottom-nav{left:8px;right:8px;width:calc(100% - 16px)}#mobile-bottom-nav .header-tab{font-size:9px}}
-@media(prefers-reduced-transparency:reduce){#mobile-bottom-nav,.admin-top>.admin-header-tabs{background:#f4f3ff;backdrop-filter:none;-webkit-backdrop-filter:none}}
+@media(prefers-reduced-transparency:reduce){#mobile-bottom-nav,.admin-top>.admin-header-tabs{background:#f0faf4;backdrop-filter:none;-webkit-backdrop-filter:none}}
