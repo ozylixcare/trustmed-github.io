@@ -1,20 +1,14 @@
-name: Publish TrustedMeds demo
+name: Verify TrustedMeds demo
 on:
   push:
+    branches: [main]
+  pull_request:
     branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
-  pages: write
-  id-token: write
-concurrency:
-  group: github-pages
-  cancel-in-progress: true
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,12 +17,5 @@ jobs:
           node-version: '22'
       - name: Verify store, admin and backend
         run: npm test
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-      - name: Upload store and admin
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Verify main branch Pages files match source
+        run: node scripts/sync-pages.cjs --check

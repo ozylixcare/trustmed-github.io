@@ -9,7 +9,7 @@ This repository is **ozylixcare/trustmed-github.io**. Only this repository is us
 - Demo ID: `demo@trustedmeds.local`
 - Demo password: `TrustedMeds@2026`
 
-Enable **Settings → Pages → Build and deployment → Source → GitHub Actions** once. The included **Publish TrustedMeds demo** workflow verifies the full source and deploys only `dist/`. If the first run happened before Pages was enabled, rerun that workflow from Actions.
+GitHub Pages uses **Deploy from a branch → main → / (root)**. The **Verify TrustedMeds demo** workflow runs tests and verifies that the root Pages files match `dist/`. It does not run a second competing Pages deployment. After changing frontend source under `dist/`, run `npm run prepare:pages` and commit the generated root files together. The root assets and `dist/` assets share identical Git blobs.
 
 GitHub Pages serves the browser-local demonstration. Admin edits appear in store tabs in the same browser. Data is isolated under `demotrustmed-` storage keys. This public demo login does not protect private business data. Node server code is included under `backend/`, but GitHub Pages does not execute it. No database or Render service is connected by this deployment.
 
@@ -164,6 +164,6 @@ The storefront has a five-tab bottom dock (Home, Store, Comparison, Quotations, 
 
 The storefront uses white surfaces, restrained accents and shadows, a compact homepage price comparison, shorter copy, and landscape banners. Existing custom text is preserved by the one-time default-copy migration.
 
-The Pages Actions workflow publishes `dist/` at the project root. Root `index.html` and `admin.html` are fallback entry links if the repository is published directly from the main branch; they redirect into `dist/` and preserve hash routes.
+The main branch publishes the generated static files at the project root. Root `index.html` and `admin.html` are generated from `dist/` so branch publishing serves the store and admin directly.
 
 The logo-colour update uses blue/green accents and glass-style controls, with solid fallbacks and reduced-motion support. The mobile storefront bar is a separate fixed footer, with five destinations; Cart remains in the header. Categories and products precede the compact comparison and offers.
